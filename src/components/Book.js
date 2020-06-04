@@ -20,7 +20,8 @@ const Book = props => {
           <div
             className="book-cover"
             style={{ backgroundImage: `url(${coverImg})` }}
-          />
+			/>
+
           <ShelfChanger book={book} books={books} changeShelf={changeShelf} />
         </div>
         <div className="book-title">{title}</div>
