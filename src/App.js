@@ -6,8 +6,8 @@ import * as BooksAPI from './BooksAPI';
 import './App.css';
 import BookList from './components/BookList';
 import { Link } from 'react-router-dom';
-import Search from './Search';
-import NotFound from './NotFound';
+import Search from './components/Search';
+import NotFound from './components/NotFound';
 
 class BooksApp extends React.Component {
   state = { books: [] };
