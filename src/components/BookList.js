@@ -32,4 +32,4 @@ BookList.propTypes = {
   changeShelf: PropTypes.func.isRequired
 };
 
-export default BookList;ls
+export default BookList;
