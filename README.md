@@ -1,86 +1,85 @@
 # MyReads Project
 
-This is the starter template for the final assessment project for Udacity's React Fundamentals course. The goal of this template is to save you time by providing a static example of the CSS and HTML markup that may be used, but without any of the React code that is needed to complete the project. If you choose to start with this template, your job will be to add interactivity to the app by refactoring the static code in this template.
+This project is my first project from Udacity's React Nanodegree course. It is an app that lets you to organize books that you have read.
 
-Of course, you are free to start this project from scratch if you wish! Just be sure to use [Create React App](https://github.com/facebookincubator/create-react-app) to bootstrap the project.
+This project was used from a template given by the Udacity. 
 
-## TL;DR
+## Table of Contents
 
-To get started developing right away:
+- [Folder Structure](#folder-structure)
+- [Available Scripts](#available-scripts)
+  - [npm start](#npm-start)
+  - [npm test](#npm-test)
+  - [npm run build](#npm-run-build)
+  - [npm run eject](#npm-run-eject)
+- [Deployment](#deployment)
 
-* install all project dependencies with `npm install`
-* start the development server with `npm start`
+## Folder Structure
 
-## What You're Getting
-```bash
-├── README.md - This file.
-├── SEARCH_TERMS.md # The whitelisted short collection of available search terms for you to use with your app.
-├── package.json # npm package manager file. It's unlikely that you'll need to modify this.
-├── public
-│   ├── favicon.ico # React Icon, You may change if you wish.
-│   └── index.html # DO NOT MODIFY
-└── src
-    ├── App.css # Styles for your app. Feel free to customize this as you desire.
-    ├── App.js # This is the root of your app. Contains static HTML right now.
-    ├── App.test.js # Used for testing. Provided with Create React App. Testing is encouraged, but not required.
-    ├── BooksAPI.js # A JavaScript API for the provided Udacity backend. Instructions for the methods are below.
-    ├── icons # Helpful images for your app. Use at your discretion.
-    │   ├── add.svg
-    │   ├── arrow-back.svg
-    │   └── arrow-drop-down.svg
-    ├── index.css # Global styles. You probably won't need to change anything here.
-    └── index.js # You should not need to modify this file. It is used for DOM rendering only.
 ```
-
-Remember that good React design practice is to create new JS files for each component and use import/require statements to include them where they are needed.
-
-## Backend Server
-
-To simplify your development process, we've provided a backend server for you to develop against. The provided file [`BooksAPI.js`](src/BooksAPI.js) contains the methods you will need to perform necessary operations on the backend:
-
-* [`getAll`](#getall)
-* [`update`](#update)
-* [`search`](#search)
-
-### `getAll`
-
-Method Signature:
-
-```js
-getAll()
+my-app/
+  README.md
+  node_modules/
+  package.json
+  public/
+    index.html
+    favicon.ico
+  src/
+    components
+    images
+    App.css
+    App.js
+    App.test.js
+    index.css
+    index.js
+    logo.svg
 ```
+## Available Scripts
 
-* Returns a Promise which resolves to a JSON object containing a collection of book objects.
-* This collection represents the books currently in the bookshelves in your app.
+In the project directory, you can run:
 
-### `update`
+### `npm start`
 
-Method Signature:
+Runs the app in the development mode.<br>
 
-```js
-update(book, shelf)
-```
+### `npm test`
 
-* book: `<Object>` containing at minimum an `id` attribute
-* shelf: `<String>` contains one of ["wantToRead", "currentlyReading", "read"]  
-* Returns a Promise which resolves to a JSON object containing the response data of the POST request
+Launches the test runner in the interactive watch mode.<br>
 
-### `search`
+### `npm run build`
 
-Method Signature:
+Builds the app for production to the `build` folder.<br>
 
-```js
-search(query, maxResults)
-```
+## Deployment
 
-* query: `<String>`
-* maxResults: `<Integer>` Due to the nature of the backend server, search results are capped at 20, even if this is set higher.
-* Returns a Promise which resolves to a JSON object containing a collection of book objects.
-* These books do not know which shelf they are on. They are raw results only. You'll need to make sure that books have the correct state while on the search page.
+`npm run build` creates a `build` directory with a production build of your app. Set up your favourite HTTP server so that a visitor to your site is served `index.html`, and requests to static paths like `/static/js/main.<hash>.js` are served with the contents of the `/static/js/main.<hash>.js` file.
 
-## Important
-The backend API uses a fixed set of cached search results and is limited to a particular set of search terms, which can be found in [SEARCH_TERMS.md](SEARCH_TERMS.md). That list of terms are the _only_ terms that will work with the backend, so don't be surprised if your searches for Basket Weaving or Bubble Wrap don't come back with any results.
+## Description
 
-## Create React App
+This is my effort for the first project in the Udacity React Nanodegree.
 
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app). You can find more information on how to perform common tasks [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
+It can be installed and started with the commands
+
+`npm install`
+  
+`npm start`
+
+The first screen shows 3 shelves of books. You can move books to another shelf by clicking the green icon beside the book and selecting the shelf name.
+
+You can also click the checkbox of many books and select the shelf from the black "Move All" icon in the top right of the page to move many books at the same time.
+
+You can search for books by clicking the purple "+" icon in the bottom right of the screen. It will take you to the search page. You can search for a book and the returned books will be displayed under the search bar. Click on the green icon to move it to one of your shelves. Use the back button in the search bar to return to the first page.
+
+You can also click on the title of the book to be brought to the books individual page. Here you can see the description of the book.
+
+## Search Terms
+
+'Android', 'Art', 'Artificial Intelligence', 'Astronomy', 'Austen', 'Baseball', 'Basketball', 'Bhagat', 'Biography', 'Brief', 'Business', 'Camus', 'Cervantes', 'Christie', 'Classics', 'Comics', 'Cook', 'Cricket', 'Cycling', 'Desai', 'Design', 'Development', 'Digital Marketing', 'Drama', 'Drawing', 'Dumas', 'Education', 'Everything', 'Fantasy', 'Film', 'Finance', 'First', 'Fitness', 'Football', 'Future', 'Games', 'Gandhi', 'History', 'History', 'Homer', 'Horror', 'Hugo', 'Ibsen', 'Journey', 'Kafka', 'King', 'Lahiri', 'Larsson', 'Learn', 'Literary Fiction', 'Make', 'Manage', 'Marquez', 'Money', 'Mystery', 'Negotiate', 'Painting', 'Philosophy', 'Photography', 'Poetry', 'Production', 'Program Javascript', 'Programming', 'React', 'Redux', 'River', 'Robotics', 'Rowling', 'Satire', 'Science Fiction', 'Shakespeare', 'Singh', 'Swimming', 'Tale', 'Thrun', 'Time', 'Tolstoy', 'Travel', 'Ultimate', 'Virtual Reality', 'Web Development', 'iOS'
+
+## Contributing
+
+As this is a personal project just for the purposes of learning react contributions will probably not be accepted.
+
+## License
+
+Licensed under the MIT license.
